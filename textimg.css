@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  width: 600px;
+  height: 400px;
+  background: #000;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: reveal 1s ease-in-out forwards;
+          animation: reveal 1s ease-in-out forwards;
+}
+
+.box .content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  animation: reveal 1s reverse forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.box .content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.box .content h2 {
+  position: absolute;
+  right: -80px;
+  bottom: 40px;
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  z-index: 2;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: reveal 1s ease-in-out forwards;
+          animation: reveal 1s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.box .content h2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  animation: reveal 1s reverse forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+/*# sourceMappingURL=textimg.css.map */
